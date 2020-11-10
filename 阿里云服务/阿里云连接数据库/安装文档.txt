@@ -1,0 +1,29 @@
+﻿安装Docker容器
+	网址：https://www.jianshu.com/p/2dae7b13ce2f
+安装Redis数据库
+	网址：https://www.runoob.com/docker/docker-install-redis.html
+安装JDK
+	网址：https://how2j.cn/k/deploy2linux/deploy2linux-setup/1607.html
+安装Tomcat
+	网址：https://how2j.cn/k/deploy2linux/deploy2linux-setup/1607.html
+安装MySQL
+	网址：https://segmentfault.com/a/1190000019708313
+安装Oracle
+	网址：https://blog.csdn.net/qq_38380025/article/details/80647620
+安装WordPress
+	网址：https://www.jianshu.com/p/88c45b891154
+
+
+nginx负载均衡配置
+server {
+        listen      9001;
+        server_name  47.103.196.186;
+
+        location ~ /edu/ {
+            proxy_pass	http://47.103.196.186:8080;
+        }
+	location ~ /vod/ {
+            	          proxy_pass	http://47.103.196.186:8081;
+      	  }
+
+    }
